@@ -1,11 +1,10 @@
 // server.mjs
 const express = require('express')
+const router = require('./routes/route')
 const app = express()
-app.get('/',(req,res)=>{
-  res.send('Hello world')
 
-})
+app.use('/',router)
 
-app.listen('3000',(req,res)=>{
-  console.log("app is listing on port http://localhost:3000")
+app.listen('4000',(req,res)=>{
+  console.log("app is listing on port http://localhost:4000")
 })
